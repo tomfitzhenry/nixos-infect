@@ -62,8 +62,11 @@ and most importantly, simply didn't work for me!
 
 4) run the script with:
 ```
-  curl https://raw.githubusercontent.com/elitak/nixos-infect/master/nixos-infect | NIX_CHANNEL=nixos-24.05 bash -x
+  export NIX_CHANNEL=nixos-25.11
+  curl https://raw.githubusercontent.com/elitak/nixos-infect/master/nixos-infect | bash -x
 ```
+
+Warning: Installing 26.05 is broken. https://github.com/elitak/nixos-infect/issues/276
 
 *NB*: This script wipes out the targeted host's root filesystem when it runs to completion.
 Any errors halt execution.
